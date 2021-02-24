@@ -409,7 +409,7 @@ storage: ~/storage
 
 ### create a directory for storage
 ```
-mkdir /home/<YOUR USERNAME>/storage
+mkdir ˜/storage
 ```
 
 ### generate the secret key
@@ -433,8 +433,8 @@ jcli address account --testing --prefix addr $(cat ~/files/receiver_public.key) 
 mkdir ~/jormungandr-backups
 mkdir ~/jormungandr-backups/<JORMUNGANDR VERSION>
 
-# Repeat this command for each file
-scp -P <YOUR SSH PORT> -i ~/.ssh/<YOUR SSH PRIVATE KEY> <YOUR VPS USERNAME>@<VPS PUBLIC IP ADDRESS>:files/<FILENAME> ~/jormungandr-backups/<JORMUNGANDR VERSION>/
+# This command copy all files from de server for you local computer folder
+scp -P <YOUR SSH PORT> -i ~/.ssh/<YOUR SSH PRIVATE KEY> <YOUR VPS USERNAME>@<VPS PUBLIC IP ADDRESS>:files/* ~/jormungandr-backups/<JORMUNGANDR VERSION>/
 ```
 
 ### Start the node in the background
